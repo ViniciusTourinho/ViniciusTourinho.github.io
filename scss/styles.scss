@@ -33,6 +33,9 @@
     ------------------------
 */
 
+// DESCOMENTAR ABAIXO PARA MODO DEBUG!
+// * { outline: 2px solid red;}
+
 // Define base and accent colors
 $base-color: #3498db;
 $base-color-hover: darken($base-color, 10%);
@@ -316,6 +319,8 @@ footer {
 }
 
 .heading {
+    color: #fff;
+    
     position: relative;
     display: inline-block;
     font-size: 2em;
@@ -359,8 +364,8 @@ footer {
 #lead-content {
     position: absolute;
     z-index: 10;
-    top: 50%;
-    left: 50%;
+    top: 20%;
+    left: 25%;
     transform: translate(-50%, -50%);
     text-align: center;
 
@@ -394,7 +399,7 @@ footer {
     bottom: 0;
     left: 0;
     background: rgba($base-color-hover, 0.8);
-    z-index: 1;
+    z-index: 0;
 }
 
 #lead-down {
@@ -446,15 +451,24 @@ footer {
 */
 
 #about {
-    padding: 75px 15px;
+    max-width: 950px;
+    top: 33%;
+    left: 2.2%;
+    position: absolute;
+    padding: 30px 15px;
     border-bottom: 1px solid $border;
+    z-index: 10;
 
     h2 {
-        color: $heading;
+        color: lighten($base-color, 50%);
+        font-weight: 400;
+        font-size: 2em;
+        margin-bottom: 15px;
     }
 
     p {
-        color: $text;
+        // color: $text;
+        color: #fff;
         margin: 0;
     }
 }
@@ -465,7 +479,7 @@ footer {
     --------------------------------
 */
 
-#experience {
+#experience {    
     padding: 50px 15px;
     text-align: center;
     border-bottom: 1px solid $border;
@@ -476,9 +490,13 @@ footer {
 }
 
 #experience-timeline {
+    z-index: 10;
+    top: 8%;
+    left: 25%;
     margin: 30px auto 0 auto;
     position: relative;
-    max-width: 1000px;
+    max-width: 800px;
+    outline: #fff dashed thin;
 
     &:before {
         position: absolute;
@@ -489,7 +507,8 @@ footer {
         right: auto;
         height: 100%;
         width: 3px;
-        background: $base-color;
+        // background: $base-color;
+        background: #919fbf;
         z-index: 0;
     }
 
@@ -549,11 +568,14 @@ footer {
     height: 50px;
     background: $base-color;
     border-radius: 50%;
+    outline: thin solid;
     float: left;
     z-index: 99;
     margin-left: 280px;
 
     i {
+        position: absolute;
+        left: 30%;
         display: block;
         font-size: 2em;
         margin-top: 10px;
@@ -567,7 +589,8 @@ footer {
     left: 0;
     top: 10px;
     font-weight: 300;
-    color: #374054;
+    // color: #374054;
+    color: #fff;
 }
 
 /*
@@ -695,30 +718,36 @@ footer {
 */
 
 #skills {
-    padding: 50px 15px;
+    top: -16%;
+    position: inherit;
+    z-index: 10;
+    padding: 15px 15px;
+    max-width: 950px;
     text-align: center;
 
     h2 {
-        color: $heading;
-        margin-bottom: 50px;
+        color: lighten($base-color, 50%);
+        font-weight: 400;
+        font-size: 2em;
+        margin-bottom: 15px;
     }
 
     ul {
         display: block;
         margin: 0 auto;
         padding: 0;
-        max-width: 800px;
+        max-width: 900px;
     }
 
     li {
         display: inline-block;
-        margin: 7px;
-        padding: 5px 10px;
+        margin: 15px;
+        padding: 7px 10px;
         color: $heading;
         background: darken($background-alt, 5%);
         list-style: none;
         cursor: default;
-        font-size: 1.2em;
+        font-size: 1.5em;
     }
 }
 

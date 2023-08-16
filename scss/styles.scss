@@ -34,7 +34,7 @@
 */
 
 // DESCOMENTAR ABAIXO PARA MODO DEBUG!
-// * { outline: 2px solid red;}
+* { outline: 1px solid red;}
 
 // Define base and accent colors
 $base-color: #3498db;
@@ -122,7 +122,7 @@ body {
             }
 
             p {
-                color: $text;
+                color: white;
                 font-size: 0.9em;
                 margin: 0;
             }
@@ -134,14 +134,14 @@ body {
     }
 }
 
-@keyframes dropHeader {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
+// @keyframes dropHeader {
+//   0% {
+//     transform: translateY(-100%);
+//   }
+//   100% {
+//     transform: translateY(0);
+//   }
+// }
 
 header {
     position: absolute;
@@ -230,7 +230,7 @@ header {
 
     span {
         font-size: 0.5em;
-        text-transform: uppercase;
+        // text-transform: uppercase;
     }
 
     i {
@@ -364,9 +364,9 @@ footer {
 #lead-content {
     position: absolute;
     z-index: 10;
-    top: 20%;
-    left: 25%;
-    transform: translate(-50%, -50%);
+    top: 5%;
+    left: 2%;
+    // transform: translate(-50%, -50%);
     text-align: center;
 
     h1, h2 {
@@ -377,7 +377,7 @@ footer {
         color: #fff;
         font-weight: 900;
         font-size: 5em;
-        text-transform: uppercase;
+        // text-transform: uppercase;
         letter-spacing: 0.05em;
         line-height: 0.9em;
     }
@@ -430,19 +430,19 @@ footer {
     }
 }
 
-@keyframes pulsate {
-    0% {
-        transform: scale(1, 1);
-    }
+// @keyframes pulsate {
+//     0% {
+//         transform: scale(1, 1);
+//     }
 
-    50% {
-        transform: scale(1.2, 1.2);
-    }
+//     50% {
+//         transform: scale(1.2, 1.2);
+//     }
 
-    100% {
-        transform: scale(1, 1);
-    }
-}
+//     100% {
+//         transform: scale(1, 1);
+//     }
+// }
 
 /*
     ---------------------------
@@ -452,8 +452,8 @@ footer {
 
 #about {
     max-width: 950px;
-    top: 33%;
-    left: 2.2%;
+    top: 22%;
+    left: 1.9%;
     position: absolute;
     padding: 30px 15px;
     border-bottom: 1px solid $border;
@@ -480,23 +480,24 @@ footer {
 */
 
 #experience {    
-    padding: 50px 15px;
-    text-align: center;
-    border-bottom: 1px solid $border;
+    position: relative;
+    top: -20%;
+    left: 57%;
+    // text-align: center;
+    // border-bottom: 1px solid $border;
 
     h2 {
-        color: $heading;
+        color: white;
     }
 }
 
 #experience-timeline {
     z-index: 10;
-    top: 8%;
-    left: 25%;
-    margin: 30px auto 0 auto;
+
+    // margin: 30px auto 0 auto;
     position: relative;
     max-width: 800px;
-    outline: #fff dashed thin;
+    // outline: #fff dashed thin;
 
     &:before {
         position: absolute;
@@ -680,7 +681,7 @@ footer {
 .project-info {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    // transform: translateY(-50%);
     margin-left: 300px;
     padding: 15px;
 
@@ -703,7 +704,7 @@ footer {
         position: relative;
         margin: 0;
         padding: 30px 15px;
-        transform: none;
+        // transform: none;
     }
 }
 
@@ -718,8 +719,9 @@ footer {
 */
 
 #skills {
-    top: -16%;
-    position: inherit;
+    position: relative;
+    top: 49%;
+    left: 1%;
     z-index: 10;
     padding: 15px 15px;
     max-width: 950px;
@@ -870,6 +872,16 @@ footer {
     -----------------------------
 */
 
+// Extra Small Devices
+@media only screen and (max-width : 1585px) {  
+
+    #experience {
+    position: relative;
+    top: 50%;
+    left: 1%;        
+    }
+}
+
 // Collapse timeline
 @media only screen and (max-width: 750px) {
 
@@ -902,18 +914,38 @@ footer {
 // Medium Devices
 @media only screen and (max-width : 992px) {
 
+    #experience {
+        position: relative;
+        top: 68%;
+        left: 1%;        
+        }
+
     #lead {
-        height: auto;
+        height: 100vh;
         min-height: auto;
         max-height: auto;
         padding: 100px 15px;
+        overflow: auto;
     }
 
     #lead-content {
         position: relative;
-        transform: none;
+        // transform: none;
         left: auto;
         top: auto;
+
+        h1 {
+            font-size: 4em;
+        }
+
+        h2 {
+            font-size: 2em;
+        }
+    }
+
+    #about {
+        text-align: center;
+        top: 32%;
 
         h1 {
             font-size: 3em;
@@ -922,13 +954,11 @@ footer {
         h2 {
             font-size: 1.75em;
         }
-    }
-
-    #about {
-        text-align: center;
 
         p {
             text-align: left;
+            overflow: auto;
+            max-height: 250px;
         }
     }
 
@@ -965,11 +995,11 @@ footer {
 
     #lead-content {
         h1 {
-            font-size: 2em;
+            font-size: 4em;
         }
 
         h2 {
-            font-size: 1.3em;
+            font-size: 2em;
         }
 
         a {
@@ -996,7 +1026,7 @@ footer {
         margin: 0;
         padding: 30px 15px;
         top: auto;
-        transform: none;
+        // transform: none;
     }
 
     footer {
@@ -1014,17 +1044,25 @@ footer {
 
     #lead-content {
         h1 {
-            font-size: 1.5em;
+            font-size: 3.5em;
         }
 
         h2 {
-            font-size: 1em;
+            font-size: 1.5em;
         }
 
         a {
-            font-size: 0.9em;
+            font-size: 1em;
             padding: 5px 10px;
         }
     }
+    #skills {
+        position: relative;
+        top: 60%;
+    }
+    #experience {
+        position: relative;
+        top: 61%;      
+        }
 
 }

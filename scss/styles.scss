@@ -34,7 +34,7 @@
 */
 
 // DESCOMENTAR ABAIXO PARA MODO DEBUG!
-* { outline: 1px solid red;}
+// * { outline: 1px solid red;}
 
 // Define base and accent colors
 $base-color: #3498db;
@@ -351,6 +351,7 @@ footer {
 */
 
 #lead {
+
     position: relative;
     height: 100vh;
     min-height: 500px;
@@ -364,7 +365,7 @@ footer {
 #lead-content {
     position: absolute;
     z-index: 10;
-    top: 5%;
+    top: 12%;
     left: 2%;
     // transform: translate(-50%, -50%);
     text-align: center;
@@ -452,7 +453,7 @@ footer {
 
 #about {
     max-width: 950px;
-    top: 22%;
+    top: 35%;
     left: 1.9%;
     position: absolute;
     padding: 30px 15px;
@@ -481,7 +482,7 @@ footer {
 
 #experience {    
     position: relative;
-    top: -20%;
+    top: -10%;
     left: 57%;
     // text-align: center;
     // border-bottom: 1px solid $border;
@@ -720,7 +721,7 @@ footer {
 
 #skills {
     position: relative;
-    top: 49%;
+    top: 69%;
     left: 1%;
     z-index: 10;
     padding: 15px 15px;
@@ -874,10 +875,13 @@ footer {
 
 // Extra Small Devices
 @media only screen and (max-width : 1585px) {  
+    #lead{
+        overflow: scroll;
+    }
 
     #experience {
     position: relative;
-    top: 50%;
+    top: 84%;
     left: 1%;        
     }
 }
@@ -916,7 +920,7 @@ footer {
 
     #experience {
         position: relative;
-        top: 68%;
+        top: 77%;
         left: 1%;        
         }
 
@@ -1062,7 +1066,7 @@ footer {
     }
     #experience {
         position: relative;
-        top: 61%;      
+        top: 65%;      
         }
 
 }

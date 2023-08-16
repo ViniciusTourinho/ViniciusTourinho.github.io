@@ -88,13 +88,22 @@ $text: #74808a;
 */
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', sans-serif, Arial, Helvetica, sans-serif;
     font-size: 16px;
 
     &.active {
         overflow: hidden;
         z-index: -1;
     }
+}
+
+/* Carregar fonte de maneira assíncrona */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    src: url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap') format('woff2');
+    /* Outras variações da fonte (300, 400, 700, 900) podem ser definidas aqui */
 }
 
 // No JS styles
@@ -359,7 +368,8 @@ footer {
     background: url(../images/lead-bg.jpg);
     background-size: cover;
     padding: 15px;
-    overflow: hidden;
+    // overflow: auto;
+
 }
 
 #lead-content {
@@ -399,7 +409,7 @@ footer {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba($base-color-hover, 0.8);
+    background: rgba(0, 79, 132, 0.8);
     z-index: 0;
 }
 
@@ -503,7 +513,7 @@ footer {
     &:before {
         position: absolute;
         content: '';
-        top: 0;
+        top: 10%;
         bottom: 0;
         left: 303px;
         right: auto;
@@ -568,7 +578,8 @@ footer {
     color: #fff;
     width: 50px;
     height: 50px;
-    background: $base-color;
+    background: #04008182;
+    // background: $base-color;
     border-radius: 50%;
     outline: thin solid;
     float: left;
@@ -665,6 +676,7 @@ footer {
         margin-bottom: 50px;
     }
 }
+
 
 .project {
     position: relative;
@@ -929,7 +941,7 @@ footer {
         min-height: auto;
         max-height: auto;
         padding: 100px 15px;
-        overflow: auto;
+        // overflow: auto;
     }
 
     #lead-content {

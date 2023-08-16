@@ -966,6 +966,10 @@ footer {
         }
     }
 
+    #skills {
+        top: 55%;
+    }
+
 }
 
 // Small Devices
@@ -1060,10 +1064,9 @@ footer {
             padding: 5px 10px;
         }
     }
-    #skills {
-        position: relative;
-        top: 60%;
-    }
+    // #skills {
+    //     top: 55%;
+    // }
     #experience {
         position: relative;
         top: 65%;      

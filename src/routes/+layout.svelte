@@ -1,8 +1,8 @@
 <script lang="ts">
-    
-    import Navbar from './Navbar.svelte';
-
+	import '../app.postcss';
+	import Navbar from './Navbar.svelte';
 </script>
 
 <Navbar />
+
 <slot />

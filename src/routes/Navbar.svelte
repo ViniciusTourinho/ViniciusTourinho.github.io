@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { enhance, type SubmitFunction } from '$app/forms';
 	import { page } from '$app/stores';
-	import '../app.postcss';
+	
 
 	const submitUpdateTheme: SubmitFunction = ({ action }) => {
 		const theme = action.searchParams.get('theme');
@@ -30,7 +30,7 @@
 				<a class=" hover:text-inherit" href="/skills">Conhecimento</a>
 			</li>
 			<li class="btn btn-outline rounded-lg">
-				<a class=" hover:text-inherit" href="/experience">Experiência</a>
+				<a class=" hover:text-inherit" href="/projects">Projetos</a>
 			</li>
 		</ul>
 	</div>
